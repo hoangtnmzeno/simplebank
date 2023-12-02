@@ -20,6 +20,7 @@ FOR NO KEY UPDATE;
 
 -- name: ListAccounts :many
 SELECT * FROM accounts
+WHERE owner = $3
 ORDER BY id
 LIMIT $1
 OFFSET $2;
